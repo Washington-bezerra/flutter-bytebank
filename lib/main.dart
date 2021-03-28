@@ -1,5 +1,5 @@
-import 'package:bytebank/screens/transferencia/lista.dart';
 import 'package:flutter/material.dart';
+import 'screens/transferencia/lista.dart';
 
 void main() => runApp(Bytebank());
 
