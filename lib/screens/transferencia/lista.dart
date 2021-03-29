@@ -36,6 +36,8 @@ class ListaTransferenciasState extends State<ListaTransferencias> {
           }));
           future.then((transferenciaRecebida) {
             if (transferenciaRecebida != null) {
+              //para atualizar quando realizar o cadastro de uma nova
+              // tranferencia
               setState(() {
                 widget._transferencias.add(transferenciaRecebida);
               });

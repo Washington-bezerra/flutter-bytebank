@@ -22,23 +22,26 @@ class FormularioTransferencia extends StatelessWidget {
         appBar: AppBar(
           title: Text(_tituloAppBar),
         ),
-        body: Column(
-          children: <Widget>[
-            Editor(
-                controlador: _controladorCampoNumperoConta,
-                rotulo: _rotuloCampoNumeroConta,
-                dica: _dicaCampoNumeroConta),
-            Editor(
-                controlador: _controladorCampoValor,
-                rotulo: _rotuloCampoValor,
-                dica: _dicaCampoValor,
-                icone: Icons.monetization_on),
-            // ignore: deprecated_member_use
-            RaisedButton(
-              child: Text(_textoBotaoConfirmar),
-              onPressed: () => _criaTranferencia(context),
-            ),
-          ],
+              //para a tela rolar quando preciso
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Editor(
+                  controlador: _controladorCampoNumperoConta,
+                  rotulo: _rotuloCampoNumeroConta,
+                  dica: _dicaCampoNumeroConta),
+              Editor(
+                  controlador: _controladorCampoValor,
+                  rotulo: _rotuloCampoValor,
+                  dica: _dicaCampoValor,
+                  icone: Icons.monetization_on),
+              // ignore: deprecated_member_use
+              RaisedButton(
+                child: Text(_textoBotaoConfirmar),
+                onPressed: () => _criaTranferencia(context),
+              ),
+            ],
+          ),
         ));
   }
 
